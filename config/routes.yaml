@@ -1,0 +1,51 @@
+# config/routes.yaml
+api_login_check:
+    path: /api/login_check
+    methods: POST
+
+# user routes
+user_index:
+    path: /api/users
+    controller: App\Controller\UserController::index
+    methods: GET
+
+user_create:
+    path: /api/users
+    controller: App\Controller\UserController::create
+    methods: POST
+
+user_show:
+    path: /api/users/{id}
+    controller: App\Controller\UserController::show
+    methods: GET
+
+# crud employee routes
+employee_index:
+    path: /api/employees
+    controller: App\Controller\EmployeeController::index
+    methods: GET
+
+employee_create:
+    path: /api/employees
+    controller: App\Controller\EmployeeController::create
+    methods: POST
+
+employee_show:
+    path: /api/employees/{id}
+    controller: App\Controller\EmployeeController::show
+    methods: GET
+
+employee_update:
+    path: /api/employees/{id}
+    controller: App\Controller\EmployeeController::update
+    methods: PUT
+
+employee_delete:
+    path: /api/employees/{id}
+    controller: App\Controller\EmployeeController::delete
+    methods: DELETE
+
+# utils routes
+position:
+    path: /api/positions
+    controller: App\Controller\PositionController::index
